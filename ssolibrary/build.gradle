@@ -68,7 +68,10 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-
+    compile 'com.cny.third:weibo:0.0.1'
+    compile 'com.cny.third:qq:0.0.1'
+    compile 'com.cny.third:weixin:0.0.1'
+    compile 'com.cny.third:weibo:0.0.1'
     compile group: "com.dy.common", name: "dysdk", version: project.ext.dysdkVersion, changing: true
 
 //    compile group: "com.dy.common", name: "dysdk", version: project.ext.dysdkVersion, changing: true
