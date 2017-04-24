@@ -1,31 +1,81 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    useLibrary 'org.apache.http.legacy'
+    compileSdkVersion project.ext.compileSdkVersion
+    buildToolsVersion project.ext.buildToolsVersion
     defaultConfig {
         applicationId "com.dy.aikexue"
-        minSdkVersion 15
-        targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        minSdkVersion project.ext.minSdkVersion
+        targetSdkVersion project.ext.targetSdkVersion
+        versionCode project.ext.versionCode
+        versionName project.ext.versionName
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {
+            debuggable true
+        }
     }
+    packagingOptions {
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+    }
+    lintOptions {
+        abortOnError false
+    }
+    dexOptions {
+//        incremental false
+        jumboMode true
+    }
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_7
+//        targetCompatibility JavaVersion.VERSION_1_7
+//    }
+    buildToolsVersion '25.0.2'
 }
+task fvm(type:Exec){
 
+    println '###########   FVM START  ###########'
+
+    workingDir 'libs'
+
+    commandLine 'fvm'
+
+    standardOutput = new ByteArrayOutputStream()
+
+    //extension method stopTomcat.output() can be used to obtain the output:
+    ext.output = {
+        return standardOutput.toString()
+    }
+
+    println '###########   FVM END  ###########'
+}
+repositories {
+    mavenCentral()
+    maven {
+        url 'http://maven.jxzy.com/nexus/content/repositories/releases/'
+    }
+    maven {
+        url 'http://maven.jxzy.com/nexus/content/repositories/snapshots/'
+    }
+
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+
+}
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile 'junit:junit:4.12'
-    testCompile "org.robolectric:robolectric:3.3.2"
+    compile project(':ssolibrary')
+    compile 'com.android.support:multidex:1.0.1'
+    testCompile 'org.robolectric:shadows-multidex:3.0'
+    testCompile 'com.jayway.android.robotium:robotium-solo:5.4.1'
+    testCompile 'org.robolectric:shadows-support-v4:3.0'
+    testCompile 'org.robolectric:robolectric:3.0'
+    testCompile 'junit:junit:4.10'
+    testCompile 'org.assertj:assertj-core:1.7.0'
 }

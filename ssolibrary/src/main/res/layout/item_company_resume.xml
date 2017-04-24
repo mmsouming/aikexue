@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_15"
+            android:paddingRight="@dimen/margin_15">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_20"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_toLeftOf="@+id/tvWage">
+
+                <TextView
+                    android:id="@+id/tvJobName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:singleLine="true"
+                    android:text="国际销售客服代表国际销售客服代表"
+                    android:textColor="@color/sso_resume_black_one"
+                    android:textSize="@dimen/textSize_level4_16" />
+
+                <TextView
+                    android:id="@+id/tvCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tvJobName"
+                    android:singleLine="true"
+                    android:text="[广州]"
+                    android:textColor="@color/sso_resume_gray_one"
+                    android:textSize="@dimen/textSize_level6_12" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tvWage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:singleLine="true"
+                android:text="300-500K"
+                android:textColor="@color/sso_resume_orange"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:paddingLeft="@dimen/margin_15"
+            android:paddingRight="@dimen/margin_15">
+
+
+            <TextView
+                android:id="@+id/tvExperience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_toLeftOf="@+id/tvTime"
+                android:singleLine="true"
+                android:text="经验1-3年/大专/专职"
+                android:textColor="@color/color_font_black_grey"
+                android:textSize="@dimen/textSize_level5_14" />
+
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+                android:text="2016-01-22"
+                android:textColor="@color/sso_resume_gray_one" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <include
+        android:id="@+id/statusView"
+        layout="@layout/item_status_error" />
+</LinearLayout>

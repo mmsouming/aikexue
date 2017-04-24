@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="tv_size_user_info">16sp</dimen>
+    <dimen name="tv_size_info_detail">15sp</dimen>
+
+    <dimen name="info_vertical_padding">14dp</dimen>
+    <dimen name="info_horizontal_padding">20dp</dimen>
+
+    <dimen name="textSize_high">20sp</dimen>
+    <dimen name="textSize_middle">18sp</dimen>
+    <dimen name="textSize_normal">16sp</dimen>
+
+    <dimen name="verification_dialog_width">280dp</dimen>
+
+    <dimen name="verification_content_width">200dp</dimen>
+
+</resources>

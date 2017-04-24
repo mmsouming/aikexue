@@ -6,15 +6,15 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import com.dy.aikexue.ssolibrary.bean.Certification;
+import com.dy.aikexue.ssolibrary.bean.NewUserData;
+import com.dy.aikexue.ssolibrary.config.Config;
+import com.dy.aikexue.ssolibrary.util.Dysso;
 import com.dy.sdk.utils.GsonUtil;
-import com.dy.sso.bean.Attrs;
-import com.dy.sso.bean.Certification;
-import com.dy.sso.bean.NewUserData;
-import com.dy.sso.config.Config;
-import com.dy.sso.util.Dysso;
 
 import java.util.ArrayList;
 import java.util.List;
+import  com.dy.aikexue.ssolibrary.bean.Attrs;
 
 /**
  * @author zengdl

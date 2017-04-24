@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_bg_c0_f9_con"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    >
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/img_x"
+        android:scaleType="centerInside"
+        android:layout_gravity="right"
+        />
+
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:layout_below="@+id/img_x"
+        android:textColor="#333333"
+        android:text="@string/no_auth"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="16sp"
+        android:id="@+id/btn_auth"
+        android:background="@drawable/selector_bg_f9_green_2_green_con"
+        android:textColor="@drawable/selector_text_green_2_white"
+        android:text="@string/go_auth"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="16sp"
+        android:id="@+id/btn_login"
+        android:background="@drawable/selector_bg_f9_green_2_green_con"
+        android:textColor="@drawable/selector_text_green_2_white"
+        android:text="@string/student_login"
+        android:layout_gravity="center_horizontal"
+        />
+</LinearLayout>

@@ -1,3 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">SsoLibrary</string>
+
+    <string name="app_name">SSOSDK</string>
+    <string name="usrHint">请输入您的用户名/手机号</string>
+    <string name="pwdHint">6到15位字母或数字，区分大小写</string>
+    <string name="loginBtn">登录</string>
+    <string name="loginAppName">云平台</string>
+    <string name="loginAppName_AKX">爱科学</string>
+    <string name="loginAppName_KX">酷校</string>
+    <string name="loginAppNameEn">Clound Platform</string>
+    <string name="register">新用户注册</string>
+    <string name="regUsrtips">请输入手机号码</string>
+    <string name="regUsrtips_get_phone_code">获取验证码</string>
+    <string name="regUsrtips_phone_code">请输入验证码</string>
+    <string name="inputImgValidationCode">请输入图片验证码</string>
+    <string name="regUsrtips_emai">请输入邮箱号</string>
+    <string name="regPwdtips">6-15位，区分大小写</string>
+    <string name="regBtn">注册</string>
+    <string name="forgetPwd">忘记密码</string>
+    <string name="firstSee">精彩内容，先睹为快 ></string>
+    <string name="otherLogin">其他账户登录</string>
+    <string name="imstudent">我是学生</string>
+    <string name="imteacher">我是老师</string>
+    <string name="no_auth">该账号暂时还没有实名认证</string>
+    <string name="go_auth">马上去实名认证</string>
+    <string name="student_login">使用学生账号登录</string>
+    <string name="u_r">你是：</string>
+    <string name="tv_title_login_kx">登录酷校账号</string>
+    <string name="tv_title_login_akx">登录爱科学账号</string>
+    <!--实名认证-->
+    <string name="auth_tv_teacher_auth">实名认证</string>
+    <string name="auth_tv_name">真实姓名</string>
+    <string name="auth_tv_subject">教学科目</string>
+    <string name="auth_tv_grade">教学年级</string>
+    <string name="auth_tv_contact">联系方式</string>
+
+    <string name="auth_et_real_name">请输入您的姓名</string>
+    <string name="auth_et_subject">请输入您的教学科目</string>
+    <string name="auth_et_grade">请输入您所教的年级</string>
+    <string name="auth_et_contact">请输入您的手机号码</string>
+    <string name="auth_et_student_number">请输入您的学号</string>
+    <string name="auth_et_teacher_number">请输入您的工号</string>
+    <string name="auth_toast_true_contact">请输入正确的手机号码</string>
+    <string name="auth_tv_explain">已阅读并同意云平台用户协议</string>
+    <string name="auth_tv_submit_authing">认证中</string>
+    <string name="auth_tv_auth_success">认证成功</string>
+    <string name="auth_tv_auth_failed">认证失败</string>
+    <string name="auth_tv_complete">资料已提交\n请等待认证通过</string>
+    <string name="auth_btn_submit">提交申请</string>
+    <string name="auth_btn_submit_reauth">重新认证</string>
+    <string name="auth_btn_return_mine">返回我</string>
+    <string name="auth_btn_return">返回我的</string>
+    <string name="companyEva">职位评价</string>
+
+    <string name="weibosdk_not_support_api_hint">微博客户端不支持分享或微博客户端未安装或微博客户端是非官方版本。</string>
+    <string name="weibosdk_need_update_hint">请更新到最新版本的新浪微博</string>
+    <string name="weixin_need_install_hint">请先安装微信客户端</string>
+    <string name="weixin_not_support_timeline_hint">当前微信客户端不支持分享到朋友圈</string>
+
+    <string name="share_success">分享成功</string>
+    <string name="share_cancel">取消分享</string>
+    <string name="share_fail">分享失败</string>
+    <string name="title_activity_auth">AuthActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_auth_submit_ok">AuthSubmitOkActivity</string>
+    <string name="title_activity_reset_pwd">重置密码</string>
+    <string name="next">下一步</string>
+    <string name="get_code">获取验证码</string>
+    <string name="code">验证码</string>
+    <string name="meet_problem">遇到问题? 请</string>
+    <string name="contact_master">联系客服</string>
+    <string name="alert">该账号不存在,</string>
+    <string name="alert_to_register">点击注册</string>
+    <string name="reset_pwd_confirm_hint">确认新密码</string>
+    <string name="confirm_update">确认修改</string>
+    <string name="submit_bind">提交绑定</string>
+    <string name="title_activity_reset_password">重置密码</string>
+    <string name="oldphone_hint">请输入原手机号码</string>
+    <string name="newphone_hint">请输入新手机号码</string>
+    <string name="input_pwd_error_hint">密码格式错误,请输入6-15位字符或数字</string>
+    <string name="server_error_hint">服务器异常,请稍后再试~</string>
+    <string name="net_error_hint">网络异常，请检查当前网络后再试</string>
+    <string name="get_code_hint">验证码类短信1小时内同一手机号发送次数不能超过3次</string>
+    <string name="get_code_success_hint">发送手机验证码成功,请注意查收</string>
+    <string name="bind_exist_phone_tip">当前账号绑定的手机号码为%s\n需要验证后才能使用手机号码登录</string>
+
+    <string name="person_data">个人资料</string>
+    <string name="avatar">头像</string>
+    <string name="nickname">昵称</string>
+    <string name="acount">账号</string>
+    <string name="gender">性别</string>
+    <string name="occ">职业经历</string>
+    <string name="addMoreOcc">添加更多职业经历</string>
+    <string name="edu">教育背景</string>
+    <string name="location">所在地</string>
+    <string name="text_no_write">未填写</string>
+    <string name="realname">姓名</string>
+    <string name="birthday">生日</string>
+    <string name="user_subject">专业</string>
+    <string name="hint_subject">认识志同道合的朋友</string>
+    <string name="email">邮箱</string>
+    <string name="toast_uploadinfo_fail_text">很抱歉，信息更新失败了</string>
+    <string name="text_user_info_name_authstr">姓名将会出现在你的平台简历中，请填写真实姓名。
+        \n如果你希望企业更加信任你，认同你所表现出的专业水平，请前往实名认证（隐私信息未经许可将严格保密）
+    </string>
+    <string name="text_user_info_name_authstr_success">(企业将更加信任你，认同你所表现出的专业水平)</string>
+    <string name="text_user_info_name_authstr_fail">抱歉，认证失败！再次认证</string>
+    <string name="person_profile">个人简介</string>
+    <string name="change_nickname">修改昵称</string>
+    <string name="user_data">个人资料</string>
+    <string name="title_activity_update_nick_name">UpdateNickNameActivity</string>
+    <string name="title_activity_bind_phone_hint">手机号</string>
+    <string name="change_bindphone_hint">更换后个人信息不变,下次需使用新手机登录</string>
+    <string name="upload_avatar_error">服务器异常，上传头像失败,请稍后再试</string>
+    <string name="title_activity_auth_user">AuthUserActivity</string>
+    <string name="title_activity_auth_result">AuthResultActivity</string>
+    <string name="title_activity_auth_edit">实名认证</string>
+    <string name="auth_hint_input_id_card_num">请输入您的身份证号码</string>
+    <string name="toast_no_auth_card_photo">请先选择证件图片</string>
+    <string name="uploadPhotoFailure">服务器异常，上传图片失败，请稍后再试</string>
+    <string name="Institutional">机构认证</string>
+    <string name="experienceList">教育背景列表</string>
+    <string name="editData">资料编辑</string>
+    <string name="authDetail">机构详情</string>
+    <string name="loadingWait">加载中，请稍候...</string>
+    <string name="passed">已通过</string>
+    <string name="applying">申请中</string>
+    <string name="notPassed">未通过</string>
+    <string name="loadDataError">获取数据失败</string>
+    <string name="netWordError">获取数据失败,请检查网络</string>
+    <string name="pleaseLogin">请先登录</string>
+    <string name="authSuccess">恭喜你，认证成功</string>
+    <string name="authWait">亲，我们正在努力审核中...</string>
+    <string name="jobNumber">学号/工号</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="entranceScroll">入学/入职</string>
+    <string name="selectOrg">请选择认证机构</string>
+    <string name="selectYear">请选择入学/入职年份</string>
+    <string name="idNotNull">学号/工号不能为空</string>
+    <string name="nameNotNull">姓名不能为空</string>
+    <string name="intoOrgError">申请加入机构失败</string>
+    <string name="applySuccess">提交申请成功</string>
+    <string name="applyError">申请失败</string>
+    <string name="upLoadAuthInfo">正在提交认证信息..</string>
+    <string name="noneOrganInfo">暂无机构信息</string>
+    <string name="orgList">机构列表</string>
+    <string name="reapply">重新申请</string>
+    <string name="noPass">审核不通过</string>
+    <string name="orgInPress">机构已经通过申请</string>
+    <string name="orgAlready">机构正在申请</string>
+    <string name="companyName">公司名称</string>
+    <string name="jobName">职位名称</string>
+    <string name="hiredate">入职时间</string>
+    <string name="leaveTime">离职时间</string>
+    <string name="jobDetail">工作内容</string>
+    <string name="Certificate">所获证书</string>
+    <string name="addCertificate">添加证书</string>
+    <string name="saveSuccess">保存成功</string>
+    <string name="saveError">保存失败</string>
+    <string name="deleteError">删除失败</string>
+    <string name="deleteSuccess">删除成功</string>
+    <string name="contentNotNone">内容不能为空</string>
+    <string name="certificateList">证书列表</string>
+    <string name="education">教育背景</string>
+    <string name="editEdu">编辑教育背景</string>
+    <string name="ediOcc">编辑职业经历</string>
+    <string name="obtainCertificate">所获证书</string>
+    <string name="certificateDetail">证书详情</string>
+    <string name="addEduOcc">添加更多职业经历</string>
+    <string name="addEduExperiences">添加更多教育经历</string>
+    <string name="piteraDetail">暂无相关信息</string>
+    <string name="inScrollTime">入学时间</string>
+    <string name="graduateTime">毕业时间</string>
+    <string name="mustBe">必须大于</string>
+    <string name="time">时间</string>
+    <string name="save">保存</string>
+    <string name="loadingSave">正在保存学号信息...</string>
+    <string name="getIdentifying">获取验证码</string>
+    <string name="numberAndJobNumber">学号/工号</string>
+    <string name="jobDes">职位详情</string>
+    <string name="resetPwd">找回密码</string>
+    <string name="bindError">绑定失败</string>
+    <string name="bindPhone">绑定手机</string>
+    <string name="inputCode">请输入验证码</string>
+    <string name="numberNotNull">学号不能为空</string>
+    <string name="cancel">取消</string>
+    <string name="loginErrorIsNotPwd">"登录失败，是否忘记密码</string>
+    <string name="phoneFormatError">手机格式不对</string>
+    <string name="identifyingLoading">验证码正在准备中...</string>
+    <string name="input6LengthCode">请输入6位数的验证码</string>
+    <string name="loadingBindPhone">正在处理绑定手机请求...</string>
+    <string name="phoneIsRegister">该手机号已被注册</string>
+    <string name="currentPhone">当前的手机号</string>
+    <string name="bindPhoneLogin">未绑定\n绑定后才能继续使用手机号进行登录</string>
+    <string name="numberOrJobNumberIsRegister">学号/工号已被注册</string>
+    <string name="numberOrJobNumberNotFormat">学号/工号格式不对</string>
+    <string name="auth_not">为了使你心仪的招聘企业信任你相关课程所表现出的专业水平，请完整以下信息</string>
+    <string name="auth_fail">为了使你心仪的招聘企业信任你相关课程所表现出的专业水平，请真实填写以下信息</string>
+    <string name="auth_halfway">审核成功后，你心仪的招聘企业将更加信任你相关课程所表现出的专业水平</string>
+    <string name="auth_success">你心仪的招聘企业将更加信任你相关课程所表现出的专业水平</string>
+    <string name="strictlyConfidential">（隐私信息未经许可将严格保密）</string>
+    <string name="oldPwdNotNull">旧密码不能为空</string>
+    <string name="newPwdNotNull">新密码不能为空</string>
+    <string name="confirmPasswordCannotBeEmpty">确认密码不能为空</string>
+    <string name="twoEnteredPasswordsDoNotMatch">确认密码输入不相同</string>
+    <string name="theNewPasswordCannotVeTheSameAsTheOldOne">新密码不能和旧密码相同</string>
+    <string name="alterPwdError">修改密码失败</string>
+    <string name="alterPwdSuccess">修改密码成功</string>
+    <string name="loading">正在加载...</string>
+    <string name="PleaseEnterYouNewPasswordAgain">请再次输入新密码</string>
+    <string name="confirmModify">确认修改</string>
+    <string name="confirmNewPwd">确认新密码</string>
+    <string name="inputNewPwd">请输入新密码</string>
+    <string name="newPwd">新密码</string>
+    <string name="inputCurrentPwd">请输入当前密码</string>
+    <string name="currentPwd">当前密码</string>
+    <string name="alterPwd">修改密码</string>
+    <string name="oldPasswordIsNotCorrect">原密码不正确</string>
+    <string name="LetterOfInvitation">邀请函</string>
+    <string name="DropBox">投递箱</string>
+    <string name="sso_DidNotFindTheRelevantData">没有找到相关数据</string>
+    <string name="Refuse">已拒绝</string>
+    <string name="favor">已接受</string>
+    <string name="InTheInvitation">邀请中</string>
+    <string name="all">全部</string>
+    <string name="Communication">待沟通</string>
+    <string name="Interview">面试中</string>
+    <string name="Obsolete">已淘汰</string>
+    <string name="HasExpired">已过期</string>
+    <string name="WillingnessToReach">已达成</string>
+    <string name="WishesDidNotReach">未达成</string>
+    <!--0代表初创型20人一下，1 20-50， 2 50-100， 3 100-500，4 500-1000， 5 1000- -->
+    <string name="peopleOne">20-50人</string>
+    <string name="peopleTwo">50-100人</string>
+    <string name="peopleThree">100-500人</string>
+    <string name="peopleFour">500-1000人</string>
+    <string name="peopleFive">1000人以上</string>
+    <string name="companyInfo">公司信息</string>
+    <string name="InJobs">在招职位</string>
+    <string name="InterviewEvaluation">面试评价</string>
+    <string name="companyDetail">公司详情</string>
+    <string name="Reasons">理由：</string>
+    <string name="TotalScore">总成绩：</string>
+    <string name="cent">分</string>
+    <string name="EducationalExperience">教育经历</string>
+    <string name="WorkExperience">工作经历</string>
+    <string name="TrainingExperience">培训经历</string>
+    <string name="workExperience">实习/实践经历</string>
+    <string name="add">添加</string>
+    <string name="expand">展开</string>
+    <string name="away">收起</string>
+
+    <string name="text_star_mark">*&#160;</string>      <!-- * 符号 -->
+    <string name="text_resume_name">姓&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;名</string>
+    <string name="text_resume_sex">性&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;别</string>
+    <string name="text_resume_source_place">籍&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;贯</string>
+    <string name="text_resume_birthday">出生日期</string>
+    <string name="text_resume_city">所在城市</string>
+    <string name="text_resume_work_experience">工作经验</string>
+    <string name="text_resume_english">英语程度</string>
+    <string name="text_resume_status">求职状态</string>
+    <string name="text_resume_gowork_date">到岗时间</string>
+    <string name="text_resume_person_code">人&#160;&#160;才&#160;&#160;码</string>
+    <string name="text_resume_mobile_phone">手机号码</string>
+    <string name="text_resume_email">邮&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;箱</string>
+    <string name="text_resume_qq">腾讯&#160;Q&#160;Q</string>
+    <string name="text_resume_job_type">职位类型</string>
+    <string name="text_resume_requ_city">期望城市</string>
+    <string name="text_resume_salary_range">薪资范围</string>
+    <string name="text_resume_job_name">职位类别</string>
+    <string name="HasAddedSkills">已经添加的技能(%d)</string>
+    <string name="ProfessionalSkills">专业技能</string>
+    <string name="NewLabelCannotBeEmpty">新增标签不能为空</string>
+    <string name="AddNewTagAlreadyExists">新增标签已经存在</string>
+    <string name="toast_resume_no_phone">请填写正确的手机号码</string>
+    <string name="toast_email_format_error">请填写正确的邮箱格式</string>
+    <string name="hint_please_select">请选择</string>
+
+    <string name="length_email_max">40</string>
+    <string name="length_qq_max">11</string>
+    <string name="length_phone_max">11</string>
+    <string name="length_name_max_16">16</string>
+    <string name="length_personcode_max">20</string>
+    <string name="length_input_text_120">120</string>
+    <string name="length_input_text_100">100</string>
+
+    <string name="DataErrorTheOperationFailed">数据错误，操作失败</string>
+    <string name="EditInternshipPracticalExperience">编辑实习/实践经历</string>
+    <string name="InternshipUnit">实习单位</string>
+    <string name="Internship">实习职位</string>
+    <string name="PracticeContent">添加工作职责，项目经验，成就业绩等信息 (6-400字)</string>
+    <string name="EditorialWorkExperience">编辑工作经历</string>
+    <string name="CompanyName">公司名称</string>
+    <string name="postName">职位名称</string>
+    <string name="jobCity">工作城市</string>
+    <string name="JobCategory">部门</string>
+    <string name="JobTitle">职位名称</string>
+    <string name="ExperienceNoMoreThanTen">经历不能超过十条</string>
+    <string name="jobContent">添加工作职责，项目经验，成就业绩等信息 (6-400字)</string>
+    <string name="EditingTraining">编辑培训经历</string>
+    <string name="TrainingName">培训名称</string>
+    <string name="TrainingInstitutions">培训机构</string>
+    <string name="TrainingContent">添加培训课程内容，课程成绩及教师评价等信息 (6-400字)</string>
+    <string name="PleaseFillInTheNameOfSchool">请填写学校名称</string>
+    <string name="PleaseFillOutTheQualification">请填写学历</string>
+    <string name="PleaseFillInTheProfessionalCategory">请填写专业类别</string>
+    <string name="ProfessionalCategory">专业类别</string>
+    <string name="PleaseFillOutTheProfessionalDescription">请填写专业描述</string>
+    <string name="ProfessionalDescriptionLengthMustBeGreaterThan6">专业描述长度要大于6</string>
+    <string name="ProfessionalWorkMustBeGreaterThan6">实习内容长度要大于6</string>
+    <string name="JobDescriptionLengthMustBeGreaterThan6">职务描述长度要大于6</string>
+    <string name="TrainingContentlengthMustBeGreaterThan6">培训内容长度要大于6</string>
+    <string name="College">学院</string>
+    <string name="EditEducation">编辑教育经历</string>
+    <string name="NameOfSchool">学校名称</string>
+    <string name="Qualifications">学历</string>
+    <string name="ProfessionalName">专业名称</string>
+    <string name="ProfessionalDescription">添加学习经历、专业课程、所获奖励等信息 (6-400字)</string>
+    <string name="SelectStartTime">请选择开始日期</string>
+    <string name="SelectEndTime">请选择结束日期</string>
+    <string name="EndTimeCannotBeLessThanStartTime">结束时间不能小于开始时间</string>
+    <string name="PleaseFillOutTheProfessionalName">请填写专业名称</string>
+    <string name="PleaseFillOutTheInternshipUnit">请填写实习单位</string>
+    <string name="PleaseFillOutTheInternship">请填写实习职位</string>
+    <string name="PleaseFillInTheContent">请填写实习内容</string>
+    <string name="PleaseFillInTheCompanyName">请填写公司名称</string>
+    <string name="PleaseFillInTheJobTitle">请填写职位名称</string>
+    <string name="PleaseFillInTheJobCategory">请填写职位类别</string>
+    <string name="PleaseFillInTheJobContent">请填写职务描述</string>
+    <string name="PleaseFillOutTheTrainName">请填写培训名称</string>
+    <string name="PleaseFillInTheTrainingContent">请填写培训内容</string>
+    <string name="Image">图片</string>
+    <string name="ImageInfoError">图片信息错误</string>
+    <string name="toast_null_appraise">不好意思，不能发表空评价</string>
+    <string name="tx_no_find_job">没有找到相关职位</string>
+
+    <string-array name="array_job_property">
+
+        <item>不限</item>
+        <item>全职</item>
+        <item>兼职</item>
+        <item>实习</item>
+    </string-array>
+
+    <string-array name="array_sex">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+
+    <string-array name="sso_ResumeDropBoxTab">
+        <item>@string/all</item>
+        <item>@string/Communication</item>
+        <item>@string/Interview</item>
+        <item>@string/Obsolete</item>
+        <item>@string/HasExpired</item>
+        <item>@string/WillingnessToReach</item>
+        <item>@string/WishesDidNotReach</item>
+    </string-array>
+    <string-array name="sso_invitationTab">
+        <item>@string/all</item>
+        <item>@string/InTheInvitation</item>
+        <item>@string/favor</item>
+        <item>@string/Refuse</item>
+        <item>@string/HasExpired</item>
+        <item>@string/WillingnessToReach</item>
+        <item>@string/WishesDidNotReach</item>
+    </string-array>
+
 </resources>

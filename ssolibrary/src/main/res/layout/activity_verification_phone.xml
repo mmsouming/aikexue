@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_verification_phone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/rect_icon" />
+
+        <EditText
+            android:inputType="number"
+            android:maxLength="6"
+            android:singleLine="true"
+            android:layout_marginRight="20dp"
+            android:id="@+id/ed_number"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入手机验证码"
+            android:textColor="@color/color_font_black"
+            android:textColorHint="@color/color_font_black_grey"
+            android:textSize="@dimen/textSize_level4_16" />
+
+        <Button
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="@drawable/select_text_white_gray"
+            android:background="@drawable/select_green_gray_button"
+            android:id="@+id/bt_get"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/getIdentifying"
+            android:textSize="@dimen/textSize_level5_14" />
+    </LinearLayout>
+
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+    <Button
+        android:textColor="@drawable/select_text_white_gray"
+        android:background="@drawable/select_green_gray_button"
+        android:id="@+id/bt_submit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="@dimen/margin_25"
+        android:layout_marginRight="@dimen/margin_25"
+        android:layout_marginTop="@dimen/margin_15"
+        android:text="提交绑定"
+        android:textSize="@dimen/textSize_level4_16" />
+
+    <TextView
+        android:layout_marginLeft="@dimen/margin_15"
+        android:layout_marginRight="@dimen/margin_15"
+        android:layout_marginTop="@dimen/margin_15"
+        android:id="@+id/tv_detail"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="你绑定的手机号是"
+        android:textColor="@color/color_font_black_grey"
+        android:textSize="@dimen/textSize_level5_14" />
+
+
+</LinearLayout>

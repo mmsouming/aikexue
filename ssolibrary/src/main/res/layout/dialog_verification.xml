@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="@dimen/verification_dialog_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/dialog_verification_bg">
+
+        <TextView
+            android:id="@+id/dialog_custom_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/margin_15"
+            android:paddingBottom="@dimen/margin_5"
+            android:gravity="center_horizontal"
+            android:text="请输入图片验证码"
+            android:textColor="@color/font_grey"
+            android:textSize="16sp"/>
+        
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/margin_15"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/close_dialog"/>
+
+
+        <LinearLayout
+            android:id="@+id/layout_verification_img"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_below="@id/dialog_custom_title"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/width_40"
+            android:orientation="horizontal"
+            android:background="@drawable/verification_bg">
+            
+            <com.dy.sso.view.VerificationImageView
+                android:id="@+id/verification_img"
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_verification_fail"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/light_grey"/>
+
+            <ImageView
+                android:id="@+id/btn_refresh"
+                android:layout_width="@dimen/width_40"
+                android:layout_height="@dimen/width_40"
+                android:padding="@dimen/margin_10"
+                android:background="@color/line_grey"
+                android:src="@drawable/ic_refresh_verification"/>
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/et_verification"
+            android:layout_below="@id/layout_verification_img"
+            android:layout_marginTop="@dimen/margin_12"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:layout_width="@dimen/verification_content_width"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:maxLength="50"/>
+
+        <View
+            android:id="@+id/line_et"
+            android:layout_below="@id/et_verification"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/verification_content_width"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"/>
+
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_below="@id/line_et"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/verification_content_width"
+            android:layout_height="@dimen/height_40"
+            android:layout_marginTop="@dimen/margin_15"
+            android:background="@drawable/btnselector"
+            android:text="确认"
+            android:textColor="@color/whiteBg"
+            android:textSize="@dimen/textSize_level3_18" />
+
+        <android.support.v4.widget.Space
+            android:layout_below="@id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_20" />
+    </RelativeLayout>
+
+</FrameLayout>

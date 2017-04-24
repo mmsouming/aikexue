@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_30"
+        android:layout_marginRight="@dimen/margin_20">
+
+        <FrameLayout
+            android:id="@+id/imgLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="5dp">
+
+            <View
+                android:id="@+id/cirGray"
+
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_gravity="center"
+                android:visibility="invisible" />
+
+            <View
+                android:id="@+id/cirGreen"
+                android:layout_width="@dimen/width_15"
+                android:layout_height="@dimen/width_15"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_toRightOf="@+id/imgLayout"
+            android:maxWidth="170dp"
+            android:singleLine="true"
+            android:text="未达成"
+            android:textColor="@color/color_green_topBar"
+            android:textSize="@dimen/textSize_level3_18" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="2017-03-02 15:00"
+            android:textColor="@color/color_font_grey"
+            android:textSize="@dimen/textSize_level5_14" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/imgLayout"
+            android:layout_marginLeft="7dp"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvStatus"
+            android:layout_below="@+id/tvStatus"
+            android:layout_marginTop="@dimen/margin_10"
+            android:singleLine="true"
+            android:text="“招聘者留言的信息，说有试题想给你做”"
+            android:textColor="@color/color_font_black_grey" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
