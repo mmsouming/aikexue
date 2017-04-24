@@ -1,0 +1,96 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+
+android {
+    compileSdkVersion project.ext.compileSdkVersion
+    buildToolsVersion project.ext.buildToolsVersion
+
+    defaultConfig {
+//        multiDexEnabled true
+        minSdkVersion project.ext.minSdkVersion
+        targetSdkVersion project.ext.targetSdkVersion
+        versionCode project.ext.versionCode
+        versionName project.ext.versionName
+    }
+    packagingOptions {
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+    useLibrary 'org.apache.http.legacy'
+    buildToolsVersion '25.0.2'
+}
+task fvm(type: Exec) {
+
+    println '###########   FVM START  ###########'
+
+    workingDir 'libs'
+
+    commandLine 'fvm'
+
+    standardOutput = new ByteArrayOutputStream()
+
+    //extension method stopTomcat.output() can be used to obtain the output:
+    ext.output = {
+        return standardOutput.toString()
+    }
+
+    println '###########   FVM END  ###########'
+}
+repositories {
+    mavenCentral()
+    maven {
+        url 'http://maven.jxzy.com/nexus/content/repositories/releases/'
+    }
+    maven {
+        url 'http://maven.jxzy.com/nexus/content/repositories/snapshots/'
+    }
+
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    compile group: "com.dy.common", name: "dysdk", version: project.ext.dysdkVersion, changing: true
+
+//    compile group: "com.dy.common", name: "dysdk", version: project.ext.dysdkVersion, changing: true
+//    compile 'com.cny.third:weixin:0.0.1'
+
+    testCompile 'junit:junit:4.12'
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            pom.groupId = "com.dy.aikexue.ssolibrary"
+            pom.artifactId = "ssosdk"
+            pom.version = project.ext.ssosdkVersion
+//            pom.version = "1.0.2-SNAPSHOT"
+            repository(url: "http://maven.jxzy.com/nexus/content/repositories/releases/") {
+                authentication(userName: "deployment", password: "123456")
+            }
+
+            snapshotRepository(url: "http://maven.jxzy.com/nexus/content/repositories/snapshots/") {
+                authentication(userName: "deployment", password: "123456")
+            }
+        }
+    }
+}

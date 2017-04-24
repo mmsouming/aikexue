@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_green_topBar"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/backLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/selector_tran_2_20000"
+            android:padding="10dp"
+            android:src="@drawable/return_ico" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="注册大洋通行证"
+        android:textColor="@color/whiteBg"
+        android:textSize="@dimen/textSize_high" />
+
+    <RelativeLayout
+        android:id="@+id/rel_top_search"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/et_top_search_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_search_editext"
+            android:hint="搜索职位/公司"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLength="13"
+            android:singleLine="true"
+            android:textSize="@dimen/textSize_level5_14" />
+
+        <ImageView
+            android:id="@+id/img_top_search_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_5"
+            android:background="@color/ctransparent"
+            android:contentDescription="@string/empty"
+            android:padding="@dimen/padding_5"
+            android:scaleType="centerInside"
+            android:src="@drawable/search_cancel_icon" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_top_right"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/selector_tran_2_20000"
+        android:src="@drawable/icon_search"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_title_right"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="保存"
+        android:visibility="gone"
+        android:textColor="@color/whiteBg"
+        android:textSize="@dimen/textSize_level3_18" />
+</LinearLayout>
+
