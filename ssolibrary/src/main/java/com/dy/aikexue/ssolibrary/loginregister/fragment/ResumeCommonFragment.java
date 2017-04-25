@@ -18,7 +18,6 @@ import android.view.ViewGroup;
 import com.dy.aikexue.ssolibrary.R;
 import com.dy.aikexue.ssolibrary.bean.BeanJobOrResume;
 import com.dy.aikexue.ssolibrary.bean.DropBoxBean;
-import com.dy.aikexue.ssolibrary.business.call.BusinessResumeCall;
 import com.dy.aikexue.ssolibrary.business.impl.BusinessInvitation;
 import com.dy.aikexue.ssolibrary.business.impl.BusinessResume;
 import com.dy.aikexue.ssolibrary.business.impl.FindJobConfig;
@@ -30,8 +29,6 @@ import com.dy.sdk.view.swiperefresh.listener.SwipeListener;
  * Created by zhong on 2017/2/17.
  * 邀请函，投递箱，找工作都会用到此页面
  * 用到此类的class
- * {@link com.dy.sso.activity.ResumeCommonListActivity}
- * {@link com.dy.sso.activity.FindJobActivity}
  */
 
 public class ResumeCommonFragment extends Fragment implements SwipeListener.OnRefreshListener, SwipeListener.OnLoadListener {
@@ -105,15 +102,15 @@ public class ResumeCommonFragment extends Fragment implements SwipeListener.OnRe
         switch (type) {
             case TYPE_DROP_BOX:
                 //投递箱
-                BusinessResume bAction = new BusinessResume(new BusinessResumeCall<DropBoxBean.DataBean.DeliverysBean>(this, 10, TYPE_DROP_BOX));
-                bAction.setStatus(status);
-                businessAction = bAction;
+//                BusinessResume bAction = new BusinessResume(new BusinessResumeCall<DropBoxBean.DataBean.DeliverysBean>(this, 10, TYPE_DROP_BOX));
+//                bAction.setStatus(status);
+//                businessAction = bAction;
                 break;
             case TYPE_INVITATION:
                 //邀请函
-                BusinessInvitation action = new BusinessInvitation<>(new BusinessResumeCall<DropBoxBean.Invitations>(this, 10, TYPE_INVITATION));
-                action.setStatus(status);
-                businessAction = action;
+//                BusinessInvitation action = new BusinessInvitation<>(new BusinessResumeCall<DropBoxBean.Invitations>(this, 10, TYPE_INVITATION));
+//                action.setStatus(status);
+//                businessAction = action;
                 break;
             case TYPE_JOB:
                 //找工作
@@ -126,7 +123,7 @@ public class ResumeCommonFragment extends Fragment implements SwipeListener.OnRe
 
     public void setUpdate_JobList(String ext, String keys, String inputKey, int sort) {
         if (fAction == null) {
-            fAction = new FindJobConfig<>(new BusinessResumeCall<BeanJobOrResume>(this, 10, TYPE_JOB));
+//            fAction = new FindJobConfig<>(new BusinessResumeCall<BeanJobOrResume>(this, 10, TYPE_JOB));
         }
         fAction.setUrlParams(ext, keys, inputKey, sort);
         businessAction = fAction;

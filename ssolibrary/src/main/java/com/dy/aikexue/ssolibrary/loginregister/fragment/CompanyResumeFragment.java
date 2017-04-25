@@ -14,7 +14,6 @@ import com.dy.aikexue.ssolibrary.bean.CompanyDetailBean;
 import com.dy.aikexue.ssolibrary.bean.DropBoxBean;
 import com.dy.aikexue.ssolibrary.business.call.BusinessCompanyResumeListCall;
 import com.dy.aikexue.ssolibrary.business.impl.BusinessCompanyResume;
-import com.dy.aikexue.ssolibrary.loginregister.adapter.CompanyResumeListAdapter;
 import com.dy.sdk.view.swiperefresh.PullToRefreshLayout;
 import com.dy.sdk.view.swiperefresh.listener.SwipeListener;
 
@@ -29,7 +28,7 @@ public class CompanyResumeFragment extends CompanyBaseFragment implements SwipeL
     private View contentView;
     private PullToRefreshLayout refreshLayout;
     private RecyclerView recyclerView;
-    private CompanyResumeListAdapter adapter;
+//    private CompanyResumeListAdapter adapter;
     private BusinessCompanyResume business;
     private BusinessCompanyResumeListCall businessCall;
 
@@ -52,7 +51,7 @@ public class CompanyResumeFragment extends CompanyBaseFragment implements SwipeL
             businessCall = new BusinessCompanyResumeListCall(this);
             business = new BusinessCompanyResume(businessCall);
             initView();
-            init();
+//            init();
             initListener();
             refreshLayout.setRefreshing(true);
             business.setCurrentPage(2);
@@ -72,15 +71,15 @@ public class CompanyResumeFragment extends CompanyBaseFragment implements SwipeL
         refreshLayout.setOnRefreshListener(this);
     }
 
-    public CompanyResumeListAdapter getAdapter() {
-        return adapter;
-    }
-
-    private void init() {
-        adapter = new CompanyResumeListAdapter(getContext());
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-    }
+//    public CompanyResumeListAdapter getAdapter() {
+//        return adapter;
+//    }
+//
+//    private void init() {
+//        adapter = new CompanyResumeListAdapter(getContext());
+//        recyclerView.setAdapter(adapter);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+//    }
 
     private void initView() {
         refreshLayout = (PullToRefreshLayout) contentView.findViewById(R.id.refreshLayout);
@@ -103,10 +102,10 @@ public class CompanyResumeFragment extends CompanyBaseFragment implements SwipeL
     @Override
     public void setData(CompanyDetailBean bean, boolean isCache) {
         super.setData(bean, isCache);
-        if (bean != null && bean.getData() != null) {
-            List<DropBoxBean.DataBean.RecruitBean> listData = bean.getData().getRecruits();
-            adapter.refresh(listData);
-        }
+//        if (bean != null && bean.getData() != null) {
+//            List<DropBoxBean.DataBean.RecruitBean> listData = bean.getData().getRecruits();
+//            adapter.refresh(listData);
+//        }
     }
 
     @Override

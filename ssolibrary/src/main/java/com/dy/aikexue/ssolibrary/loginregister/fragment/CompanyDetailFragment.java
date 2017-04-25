@@ -15,7 +15,6 @@ import android.widget.TextView;
 import com.dy.aikexue.ssolibrary.R;
 import com.dy.aikexue.ssolibrary.bean.NewUserData;
 import com.dy.aikexue.ssolibrary.business.impl.BusinessCompanyDetail;
-import com.dy.aikexue.ssolibrary.loginregister.adapter.DefaultFragmentAdapter;
 import com.dy.aikexue.ssolibrary.util.Tools;
 import com.dy.sdk.utils.ObjectValueUtil;
 import com.dy.sdk.utils.ScreenUtil;
@@ -23,7 +22,6 @@ import com.dy.sdk.view.dialog.LoadingDialog;
 
 import org.cny.awf.view.ImageView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -37,7 +35,7 @@ public class CompanyDetailFragment extends Fragment implements AppBarLayout.OnOf
     private View contentView;
     private ViewPager viewPager;
     private BusinessCompanyDetail business;
-    private DefaultFragmentAdapter adapter;
+//    private DefaultFragmentAdapter adapter;
     private List<Fragment> listFragment;
     private TabLayout tabLayout;
     private String companyId;

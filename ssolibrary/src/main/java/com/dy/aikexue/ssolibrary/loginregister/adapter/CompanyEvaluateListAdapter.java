@@ -10,7 +10,6 @@ import android.widget.TextView;
 import com.dy.aikexue.ssolibrary.R;
 import com.dy.aikexue.ssolibrary.bean.EvaluateBean;
 import com.dy.aikexue.ssolibrary.bean.ResumeInfo;
-import com.dy.aikexue.ssolibrary.loginregister.activit.CompanyEvaluateActivity;
 import com.dy.sdk.utils.ScreenUtil;
 import com.dy.sdk.view.CircleImageView;
 
@@ -104,18 +103,18 @@ public class CompanyEvaluateListAdapter extends RecyclerView.Adapter<CompanyEval
         EvaluateBean.DataBean.AppsBean bean = mList.get(position);
         String _id = bean.getId();
 
-        if (_id != null && _id.equals(ResumeListAdapter.EXCEPTION_LOAD_ERROR_ID)) {
-            //加载失败
-            holder.showErrorLayout(mContext.getString(R.string.loadDataError));
-        } else if (_id != null && _id.equals(ResumeListAdapter.EXCEPTION_NOT_DATA_ID)) {
-            //空数据
-            holder.showErrorLayout(mContext.getString(R.string.sso_DidNotFindTheRelevantData));
-        } else if (_id != null && _id.equals(ResumeListAdapter.EXCEPTION_NET_WORK_ID)) {
-            //网络错误
-            holder.showErrorLayout(mContext.getString(R.string.netWordError));
-        } else {
-            setData(holder, bean);
-        }
+//        if (_id != null && _id.equals(ResumeListAdapter.EXCEPTION_LOAD_ERROR_ID)) {
+//            //加载失败
+//            holder.showErrorLayout(mContext.getString(R.string.loadDataError));
+//        } else if (_id != null && _id.equals(ResumeListAdapter.EXCEPTION_NOT_DATA_ID)) {
+//            //空数据
+//            holder.showErrorLayout(mContext.getString(R.string.sso_DidNotFindTheRelevantData));
+//        } else if (_id != null && _id.equals(ResumeListAdapter.EXCEPTION_NET_WORK_ID)) {
+//            //网络错误
+//            holder.showErrorLayout(mContext.getString(R.string.netWordError));
+//        } else {
+//            setData(holder, bean);
+//        }
     }
 
     private void setData(VH holder, EvaluateBean.DataBean.AppsBean bean) {
@@ -152,7 +151,7 @@ public class CompanyEvaluateListAdapter extends RecyclerView.Adapter<CompanyEval
         @Override
         public void onClick(View v) {
 
-            mContext.startActivity(CompanyEvaluateActivity.getJumpIntent(mContext, recId));
+//            mContext.startActivity(CompanyEvaluateActivity.getJumpIntent(mContext, recId));
         }
     }
 

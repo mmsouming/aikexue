@@ -1,6 +1,5 @@
 package com.dy.aikexue.ssolibrary.business.impl;
 
-import com.dy.aikexue.ssolibrary.business.call.BusinessResumeCall;
 import com.dy.aikexue.ssolibrary.business.call.ResumeHCall;
 import com.dy.aikexue.ssolibrary.config.Config;
 import com.dy.aikexue.ssolibrary.loginregister.fragment.ResumeCommonFragment;
@@ -59,9 +58,9 @@ public class FindJobConfig<T> extends BusinessAction<T> {
      * @param rTotal   职位数
      */
     public void setTotals(int allTotal, int rTotal) {
-        if (!Tools.isStringNull(inputKey)) {
-            BusinessResumeCall callback = (BusinessResumeCall) getCallBack();
-            callback.setEveryTotals(allTotal, rTotal,inputKey);
-        }
+//        if (!Tools.isStringNull(inputKey)) {
+//            BusinessResumeCall callback = (BusinessResumeCall) getCallBack();
+//            callback.setEveryTotals(allTotal, rTotal,inputKey);
+//        }
     }
 }

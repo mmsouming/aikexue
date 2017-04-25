@@ -310,7 +310,7 @@ public class Dysso {
         isShowing = true;
         ssoListener = lister;
         Intent intent = new Intent();
-        intent.setClassName(context, "com.dy.sso.activity.LoginActivity");
+        intent.setClassName(context, "com.dy.aikexue.ssolibrary.loginregister.activit.LoginActivity");
         context.startActivity(intent);
     }
 
@@ -367,16 +367,16 @@ public class Dysso {
         try {
             ComponentName localComponentName1 = new ComponentName(
                     paramContext.getPackageName(),
-                    "com.dy.sso.activity.LoginActivity");
+                    "com.dy.aikexue.ssolibrary.loginregister.activit.LoginActivity");
 
             localObject = paramContext.getPackageManager();
 
             ((PackageManager) localObject).getActivityInfo(localComponentName1,
                     0);
         } catch (PackageManager.NameNotFoundException localNameNotFoundException1) {
-            localObject = "没有在AndroidManifest.xml中检测到com.dy.sso.activity.LoginActivity,请加上com.dy.sso.activity.LoginActivity";
+            localObject = "没有在AndroidManifest.xml中检测到com.dy.aikexue.ssolibrary.loginregister.activit.LoginActivity,请加上com.dy.aikexue.ssolibrary.loginregister.activit.LoginActivity";
             Log.i(TAG,
-                    "AndroidManifest.xml 没有检测到com.dy.sso.activity.LoginActivity"
+                    "AndroidManifest.xml 没有检测到com.dy.aikexue.ssolibrary.loginregister.activit.LoginActivity"
                             + (String) localObject);
             return false;
         }
